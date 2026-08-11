@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Achadinhos Online</title>
 
 <style>
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,11 +14,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f6f3fa;
+    background: #f7f4fa;
     color: #222;
 }
-
-/* CABEÇALHO */
 
 header {
     background: linear-gradient(135deg, #6d28d9, #a855f7);
@@ -33,15 +26,13 @@ header {
 }
 
 header h1 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 8px;
 }
 
 header p {
-    font-size: 16px;
+    font-size: 15px;
 }
-
-/* PESQUISA */
 
 .search {
     background: white;
@@ -49,699 +40,412 @@ header p {
 }
 
 .search input {
+    display: block;
     width: 100%;
     max-width: 700px;
-    display: block;
     margin: auto;
-
     padding: 15px 20px;
-
     border: 1px solid #ddd;
     border-radius: 30px;
-
     font-size: 16px;
     outline: none;
 }
 
-/* CATEGORIAS */
-
 .categories {
     background: white;
-
     display: flex;
     gap: 10px;
-
     padding: 15px;
-
     overflow-x: auto;
 }
 
 .categories button {
-
     border: none;
-
     background: #eee;
-
     padding: 11px 18px;
-
     border-radius: 25px;
-
     cursor: pointer;
-
     white-space: nowrap;
-
     font-size: 14px;
 }
 
 .categories button:hover {
-
     background: #7c3aed;
     color: white;
-
 }
-
-/* CONTAINER */
 
 .container {
-
     max-width: 1100px;
-
     margin: auto;
-
     padding: 25px 15px;
-
 }
-
-.title {
-
-    margin-bottom: 20px;
-
-    font-size: 24px;
-
-}
-
-/* PRODUTOS */
-
-.products {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(210px, 1fr));
-
-    gap: 18px;
-
-}
-
-/* CARD */
-
-.product {
-
-    background: white;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    box-shadow:
-    0 4px 15px rgba(0,0,0,0.08);
-
-    transition: 0.25s;
-
-}
-
-.product:hover {
-
-    transform: translateY(-5px);
-
-}
-
-/* IMAGEM */
-
-.product-image {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    background: #eee;
-
-}
-
-/* PRODUTO SEM IMAGEM */
-
-.image-placeholder {
-
-    width: 100%;
-
-    height: 220px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 20px;
-
-    font-size: 50px;
-
-    background: linear-gradient(
-        135deg,
-        #eee,
-        #ddd
-    );
-
-}
-
-/* INFORMAÇÕES */
-
-.product-info {
-
-    padding: 18px;
-
-}
-
-.product h3 {
-
-    font-size: 18px;
-
-    margin-bottom: 8px;
-
-}
-
-.product p {
-
-    color: #666;
-
-    font-size: 14px;
-
-    line-height: 1.5;
-
-    margin-bottom: 15px;
-
-}
-
-/* BOTÃO */
-
-.buy {
-
-    display: block;
-
-    width: 100%;
-
-    text-align: center;
-
-    background: #7c3aed;
-
-    color: white;
-
-    text-decoration: none;
-
-    padding: 13px;
-
-    border-radius: 12px;
-
-    font-weight: bold;
-
-    transition: 0.2s;
-
-}
-
-.buy:hover {
-
-    background: #5b21b6;
-
-}
-
-/* SEÇÃO DE DESTAQUE */
 
 .banner {
-
     background: white;
-
     border-radius: 18px;
-
     padding: 25px;
-
-    margin-bottom: 30px;
-
-    box-shadow:
-    0 4px 15px rgba(0,0,0,0.06);
-
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
 }
 
 .banner h2 {
-
     color: #6d28d9;
-
     margin-bottom: 8px;
-
 }
 
 .banner p {
-
     color: #666;
-
 }
 
-/* RODAPÉ */
+.title {
+    margin-bottom: 18px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.product {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: .2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #eee, #ddd);
+    font-size: 60px;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.category {
+    display: inline-block;
+    background: #eee;
+    color: #6d28d9;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.rating {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #6d28d9;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.buy {
+    display: block;
+    text-align: center;
+    background: #7c3aed;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.buy:hover {
+    background: #5b21b6;
+}
 
 footer {
-
-    background: #222;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 30px 15px;
-
     margin-top: 40px;
-
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
 }
 
 footer p {
-
     margin: 5px;
-
     color: #ccc;
-
 }
 
-/* CELULAR */
-
 @media(max-width:500px) {
-
-    header h1 {
-
-        font-size: 26px;
-
-    }
-
     .products {
-
-        grid-template-columns:
-        repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-
     }
 
-    .product-image,
-    .image-placeholder {
-
-        height: 160px;
-
+    .product-image {
+        height: 150px;
+        font-size: 45px;
     }
 
     .product-info {
-
         padding: 12px;
-
     }
 
     .product h3 {
-
         font-size: 15px;
-
     }
 
-    .product p {
-
-        font-size: 13px;
-
+    .price {
+        font-size: 18px;
     }
 
     .buy {
-
         font-size: 13px;
-
         padding: 11px 5px;
-
     }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- CABEÇALHO -->
-
 <header>
-
-<h1>🛍️ Achadinhos Online</h1>
-
-<p>
-Produtos incríveis encontrados para você!
-</p>
-
+    <h1>🛍️ Achadinhos Online</h1>
+    <p>Os melhores achadinhos em um só lugar!</p>
 </header>
 
-
-<!-- PESQUISA -->
-
 <div class="search">
-
-<input
-type="text"
-id="search"
-placeholder="🔎 Procurar produto..."
-onkeyup="buscarProduto()"
->
-
+    <input
+        id="search"
+        type="text"
+        placeholder="🔎 Procurar produto..."
+        onkeyup="buscarProduto()"
+    >
 </div>
-
-
-<!-- CATEGORIAS -->
 
 <div class="categories">
-
-<button onclick="filtrar('todos')">
-✨ Todos
-</button>
-
-<button onclick="filtrar('casa')">
-🏠 Casa
-</button>
-
-<button onclick="filtrar('beleza')">
-💄 Beleza
-</button>
-
-<button onclick="filtrar('moda')">
-👕 Moda
-</button>
-
-<button onclick="filtrar('cabelos')">
-💜 Cabelos
-</button>
-
+    <button onclick="filtrar('todos')">✨ Todos</button>
+    <button onclick="filtrar('beleza')">💄 Beleza</button>
+    <button onclick="filtrar('roupas')">👕 Roupas</button>
+    <button onclick="filtrar('cozinha')">🏠 Cozinha</button>
 </div>
-
 
 <main class="container">
 
-
-<!-- BANNER -->
-
 <div class="banner">
-
-<h2>🔥 Achadinhos em destaque</h2>
-
-<p>
-Confira produtos selecionados e clique em
-<strong>Comprar agora</strong> para ver a oferta.
-</p>
-
+    <h2>🔥 Ofertas em destaque</h2>
+    <p>Encontre seus produtos favoritos e confira as ofertas.</p>
 </div>
 
+<h2 class="title">🛍️ Produtos</h2>
 
-<h2 class="title">
-🛍️ Produtos
-</h2>
+<div class="products">
 
-
-<div class="products" id="products">
-
-
-<!-- PRODUTO 1 -->
-
-<div class="product" data-category="casa">
-
-<div class="image-placeholder">
-
-🪵
-
-</div>
-
-<div class="product-info">
-
-<h3>
-Kit de Tábuas de Madeira
-</h3>
-
-<p>
-Lindas peças de madeira para deixar sua cozinha mais bonita e organizada.
-</p>
-
-<a
-class="buy"
-href="https://s.shopee.com.br/2gAGNMCcAF"
-target="_blank">
-
-🛒 COMPRAR AGORA
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PRODUTO 2 -->
+<!-- EUDORA -->
 
 <div class="product" data-category="beleza">
 
-<div class="image-placeholder">
+    <div class="product-image">💜✨</div>
 
-💜
+    <div class="product-info">
 
-</div>
+        <span class="category">💄 Beleza</span>
 
-<div class="product-info">
+        <h3>Eudora Siàge Revela os Cachos</h3>
 
-<h3>
-Melanina — Clareador de Axilas e Virilhas
-</h3>
+        <p class="description">
+            Produto para cuidados e definição dos cachos.
+        </p>
 
-<p>
-Produto de cuidados pessoais apresentado na imagem enviada.
-</p>
+        <p class="rating">
+            ⭐ Produto em destaque
+        </p>
 
-<a
-class="buy"
-href="https://s.shopee.com.br/3LPxAczrJV"
-target="_blank">
+        <div class="price">R$ 89,99</div>
 
-🛒 COMPRAR AGORA
+        <a
+            class="buy"
+            href="https://s.shopee.com.br/5fnrzTfgPv"
+            target="_blank"
+            rel="noopener">
+            🛒 COMPRAR AGORA
+        </a>
 
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PRODUTO 3 -->
-
-<div class="product" data-category="moda">
-
-<div class="image-placeholder">
-
-❤️
-
-</div>
-
-<div class="product-info">
-
-<h3>
-Conjunto Feminino de Corações
-</h3>
-
-<p>
-Conjunto feminino com estampa de corações.
-</p>
-
-<a
-class="buy"
-href="https://s.shopee.com.br/4Az4Afspoi"
-target="_blank">
-
-🛒 COMPRAR AGORA
-
-</a>
-
-</div>
-
+    </div>
 </div>
 
 
-<!-- PRODUTO 4 -->
+<!-- PIJAMA -->
 
-<div class="product" data-category="cabelos">
+<div class="product" data-category="roupas">
 
-<div class="image-placeholder">
+    <div class="product-image">❤️👗</div>
 
-💜✨
+    <div class="product-info">
 
-</div>
+        <span class="category">👕 Roupas</span>
 
-<div class="product-info">
+        <h3>Kit Camisola + Baby Doll</h3>
 
-<h3>
-Eudora Siàge Revela os Cachos 270ml
-</h3>
+        <p class="description">
+            Kit com 2 peças feminino com estampa de coração.
+        </p>
 
-<p>
-Creme para pentear indicado para cabelos ondulados,
-cacheados, crespos e em transição. Ajuda na definição
-e no controle do frizz.
-</p>
+        <p class="rating">
+            ⭐ 4,7 · 2 mil+ vendas
+        </p>
 
-<a
-class="buy"
-href="https://s.shopee.com.br/9KhAKVDLVZ"
-target="_blank">
+        <div class="price">R$ 34,99</div>
 
-🛒 COMPRAR AGORA
+        <a
+            class="buy"
+            href="https://s.shopee.com.br/1gHjEATA9P"
+            target="_blank"
+            rel="noopener">
+            🛒 COMPRAR AGORA
+        </a>
 
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PRODUTO 5 -->
-
-<div class="product" data-category="todos">
-
-<div class="image-placeholder">
-
-🔥
-
-</div>
-
-<div class="product-info">
-
-<h3>
-Achadinho da Shopee
-</h3>
-
-<p>
-Confira este produto e veja a oferta disponível.
-</p>
-
-<a
-class="buy"
-href="https://s.shopee.com.br/1LesnUtweR"
-target="_blank">
-
-🛒 COMPRAR AGORA
-
-</a>
-
-</div>
-
+    </div>
 </div>
 
 
-<!-- PRODUTO 6 -->
+<!-- MESA POSTA -->
 
-<div class="product" data-category="todos">
+<div class="product" data-category="cozinha">
 
-<div class="image-placeholder">
+    <div class="product-image">🪵🍽️</div>
 
-⭐
+    <div class="product-info">
 
+        <span class="category">🏠 Cozinha</span>
+
+        <h3>Kit Mesa Posta + Tábuas e Petisqueira</h3>
+
+        <p class="description">
+            Kit para servir e deixar sua cozinha mais elegante.
+        </p>
+
+        <p class="rating">
+            ⭐ 4,9 · 1 mil+ vendas
+        </p>
+
+        <div class="price">R$ 28,38</div>
+
+        <a
+            class="buy"
+            href="https://s.shopee.com.br/6fgPBOinDu"
+            target="_blank"
+            rel="noopener">
+            🛒 COMPRAR AGORA
+        </a>
+
+    </div>
 </div>
 
-<div class="product-info">
 
-<h3>
-Achadinho em Oferta
-</h3>
+<!-- CLAREADOR -->
 
-<p>
-Confira este produto diretamente na Shopee.
-</p>
+<div class="product" data-category="beleza">
 
-<a
-class="buy"
-href="https://s.shopee.com.br/7VFW8tmS6N"
-target="_blank">
+    <div class="product-image">💜🧴</div>
 
-🛒 COMPRAR AGORA
+    <div class="product-info">
 
-</a>
+        <span class="category">💄 Beleza</span>
 
+        <h3>Clareador de Axilas e Virilhas Melanina</h3>
+
+        <p class="description">
+            Produto de cuidados pessoais da Phállebeauty.
+        </p>
+
+        <p class="rating">
+            ⭐ 4,9 · 1 mil+ vendas
+        </p>
+
+        <div class="price">R$ 33,00</div>
+
+        <a
+            class="buy"
+            href="https://s.shopee.com.br/2VqqDmWlnD"
+            target="_blank"
+            rel="noopener">
+            🛒 COMPRAR AGORA
+        </a>
+
+    </div>
 </div>
-
-</div>
-
 
 </div>
 
 </main>
 
-
-<!-- RODAPÉ -->
-
 <footer>
-
-<p>
-🛍️ Achadinhos Online
-</p>
-
-<p>
-Encontre produtos incríveis em um só lugar.
-</p>
-
-<p>
-© 2026 Achadinhos Online
-</p>
-
+    <p>🛍️ Achadinhos Online</p>
+    <p>Encontre produtos incríveis em um só lugar.</p>
+    <p>© 2026 Achadinhos Online</p>
 </footer>
-
 
 <script>
 
-
-/* PESQUISA */
-
 function buscarProduto() {
 
-    let texto =
-    document
-    .getElementById("search")
-    .value
-    .toLowerCase();
+    const texto = document
+        .getElementById("search")
+        .value
+        .toLowerCase();
 
-    let produtos =
-    document.querySelectorAll(".product");
+    const produtos =
+        document.querySelectorAll(".product");
 
     produtos.forEach(function(produto) {
 
-        let nome =
-        produto
-        .querySelector("h3")
-        .innerText
-        .toLowerCase();
+        const nome =
+            produto.querySelector("h3")
+            .innerText
+            .toLowerCase();
 
-        if(nome.includes(texto)) {
-
-            produto.style.display = "block";
-
-        } else {
-
-            produto.style.display = "none";
-
-        }
+        produto.style.display =
+            nome.includes(texto)
+            ? "block"
+            : "none";
 
     });
-
 }
 
 
-/* FILTRO */
-
 function filtrar(categoria) {
 
-    let produtos =
-    document.querySelectorAll(".product");
+    const produtos =
+        document.querySelectorAll(".product");
 
     produtos.forEach(function(produto) {
 
-        if(
+        if (
             categoria === "todos" ||
             produto.dataset.category === categoria
         ) {
-
             produto.style.display = "block";
-
         } else {
-
             produto.style.display = "none";
-
         }
 
     });
@@ -750,7 +454,5 @@ function filtrar(categoria) {
 
 </script>
 
-
 </body>
-
 </html>
