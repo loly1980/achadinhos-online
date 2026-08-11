@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Achadinhos Online</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,25 +19,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #f6f3fa;
     color: #222;
 }
 
+/* CABEÇALHO */
+
 header {
-    background: linear-gradient(135deg, #7b2cff, #a855f7);
+    background: linear-gradient(135deg, #6d28d9, #a855f7);
     color: white;
-    padding: 30px 15px;
     text-align: center;
+    padding: 35px 15px;
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 8px;
 }
 
 header p {
-    font-size: 15px;
+    font-size: 16px;
 }
+
+/* PESQUISA */
 
 .search {
     background: white;
@@ -42,308 +50,707 @@ header p {
 
 .search input {
     width: 100%;
-    padding: 14px 18px;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+
+    padding: 15px 20px;
+
     border: 1px solid #ddd;
-    border-radius: 25px;
+    border-radius: 30px;
+
     font-size: 16px;
     outline: none;
 }
 
+/* CATEGORIAS */
+
 .categories {
+    background: white;
+
     display: flex;
     gap: 10px;
-    overflow-x: auto;
+
     padding: 15px;
-    background: white;
+
+    overflow-x: auto;
 }
 
 .categories button {
+
     border: none;
-    padding: 10px 16px;
-    border-radius: 20px;
+
     background: #eee;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
     cursor: pointer;
+
     white-space: nowrap;
+
+    font-size: 14px;
 }
 
 .categories button:hover {
-    background: #7b2cff;
+
+    background: #7c3aed;
     color: white;
+
 }
 
+/* CONTAINER */
+
 .container {
+
     max-width: 1100px;
+
     margin: auto;
-    padding: 20px 15px;
+
+    padding: 25px 15px;
+
 }
 
 .title {
-    margin-bottom: 15px;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
 }
+
+/* PRODUTOS */
 
 .products {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 18px;
+
 }
+
+/* CARD */
 
 .product {
+
     background: white;
-    border-radius: 15px;
+
+    border-radius: 18px;
+
     overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
+
+    transition: 0.25s;
+
 }
 
-.product img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.product:hover {
+
+    transform: translateY(-5px);
+
 }
+
+/* IMAGEM */
+
+.product-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    background: #eee;
+
+}
+
+/* PRODUTO SEM IMAGEM */
+
+.image-placeholder {
+
+    width: 100%;
+
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #eee,
+        #ddd
+    );
+
+}
+
+/* INFORMAÇÕES */
 
 .product-info {
-    padding: 15px;
+
+    padding: 18px;
+
 }
 
 .product h3 {
-    font-size: 17px;
+
+    font-size: 18px;
+
     margin-bottom: 8px;
+
 }
 
 .product p {
-    color: #777;
+
+    color: #666;
+
     font-size: 14px;
-    margin-bottom: 10px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+
 }
 
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #7b2cff;
-    margin-bottom: 12px;
-}
+/* BOTÃO */
 
 .buy {
+
     display: block;
+
+    width: 100%;
+
     text-align: center;
-    background: #7b2cff;
+
+    background: #7c3aed;
+
     color: white;
+
     text-decoration: none;
-    padding: 12px;
-    border-radius: 10px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
     font-weight: bold;
+
+    transition: 0.2s;
+
 }
 
 .buy:hover {
-    background: #5b18c9;
+
+    background: #5b21b6;
+
 }
 
-footer {
-    margin-top: 40px;
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+/* SEÇÃO DE DESTAQUE */
+
+.banner {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.06);
+
 }
+
+.banner h2 {
+
+    color: #6d28d9;
+
+    margin-bottom: 8px;
+
+}
+
+.banner p {
+
+    color: #666;
+
+}
+
+/* RODAPÉ */
+
+footer {
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    margin-top: 40px;
+
+}
+
+footer p {
+
+    margin: 5px;
+
+    color: #ccc;
+
+}
+
+/* CELULAR */
+
+@media(max-width:500px) {
+
+    header h1 {
+
+        font-size: 26px;
+
+    }
+
+    .products {
+
+        grid-template-columns:
+        repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+    .product-image,
+    .image-placeholder {
+
+        height: 160px;
+
+    }
+
+    .product-info {
+
+        padding: 12px;
+
+    }
+
+    .product h3 {
+
+        font-size: 15px;
+
+    }
+
+    .product p {
+
+        font-size: 13px;
+
+    }
+
+    .buy {
+
+        font-size: 13px;
+
+        padding: 11px 5px;
+
+    }
+
+}
+
 </style>
+
 </head>
 
 <body>
 
+
+<!-- CABEÇALHO -->
+
 <header>
-    <h1>🛍️ Achadinhos Online</h1>
-    <p>Os melhores produtos em um só lugar!</p>
+
+<h1>🛍️ Achadinhos Online</h1>
+
+<p>
+Produtos incríveis encontrados para você!
+</p>
+
 </header>
 
+
+<!-- PESQUISA -->
+
 <div class="search">
-    <input
-        type="text"
-        id="search"
-        placeholder="🔎 Procurar produto..."
-        onkeyup="buscarProduto()"
-    >
+
+<input
+type="text"
+id="search"
+placeholder="🔎 Procurar produto..."
+onkeyup="buscarProduto()"
+>
+
 </div>
 
+
+<!-- CATEGORIAS -->
+
 <div class="categories">
-    <button onclick="filtrar('todos')">Todos</button>
-    <button onclick="filtrar('beleza')">💄 Beleza</button>
-    <button onclick="filtrar('casa')">🏠 Casa</button>
-    <button onclick="filtrar('eletronicos')">📱 Eletrônicos</button>
-    <button onclick="filtrar('moda')">👕 Moda</button>
+
+<button onclick="filtrar('todos')">
+✨ Todos
+</button>
+
+<button onclick="filtrar('casa')">
+🏠 Casa
+</button>
+
+<button onclick="filtrar('beleza')">
+💄 Beleza
+</button>
+
+<button onclick="filtrar('moda')">
+👕 Moda
+</button>
+
+<button onclick="filtrar('cabelos')">
+💜 Cabelos
+</button>
+
 </div>
+
 
 <main class="container">
 
-<h2 class="title">🔥 Produtos em destaque</h2>
 
-<div class="products">
+<!-- BANNER -->
+
+<div class="banner">
+
+<h2>🔥 Achadinhos em destaque</h2>
+
+<p>
+Confira produtos selecionados e clique em
+<strong>Comprar agora</strong> para ver a oferta.
+</p>
+
+</div>
+
+
+<h2 class="title">
+🛍️ Produtos
+</h2>
+
+
+<div class="products" id="products">
+
 
 <!-- PRODUTO 1 -->
-<div class="product" data-category="eletronicos">
 
-<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
+<div class="product" data-category="casa">
+
+<div class="image-placeholder">
+
+🪵
+
+</div>
 
 <div class="product-info">
 
-<h3>Fone Bluetooth</h3>
+<h3>
+Kit de Tábuas de Madeira
+</h3>
 
-<p>Fone sem fio para música e chamadas.</p>
+<p>
+Lindas peças de madeira para deixar sua cozinha mais bonita e organizada.
+</p>
 
-<div class="price">R$ 79,90</div>
-
-<a class="buy"
-href="COLOQUE-SEU-LINK-AQUI"
+<a
+class="buy"
+href="https://s.shopee.com.br/2gAGNMCcAF"
 target="_blank">
 
-🛒 Ver oferta
+🛒 COMPRAR AGORA
 
 </a>
 
 </div>
+
 </div>
 
 
 <!-- PRODUTO 2 -->
+
 <div class="product" data-category="beleza">
 
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80">
+<div class="image-placeholder">
+
+💜
+
+</div>
 
 <div class="product-info">
 
-<h3>Kit de Beleza</h3>
+<h3>
+Melanina — Clareador de Axilas e Virilhas
+</h3>
 
-<p>Produtos para cuidar da sua beleza.</p>
+<p>
+Produto de cuidados pessoais apresentado na imagem enviada.
+</p>
 
-<div class="price">R$ 49,90</div>
-
-<a class="buy"
-href="COLOQUE-SEU-LINK-AQUI"
+<a
+class="buy"
+href="https://s.shopee.com.br/3LPxAczrJV"
 target="_blank">
 
-🛒 Ver oferta
+🛒 COMPRAR AGORA
 
 </a>
 
 </div>
+
 </div>
 
 
 <!-- PRODUTO 3 -->
-<div class="product" data-category="casa">
 
-<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80">
+<div class="product" data-category="moda">
+
+<div class="image-placeholder">
+
+❤️
+
+</div>
 
 <div class="product-info">
 
-<h3>Produto para Casa</h3>
+<h3>
+Conjunto Feminino de Corações
+</h3>
 
-<p>Uma ótima opção para sua casa.</p>
+<p>
+Conjunto feminino com estampa de corações.
+</p>
 
-<div class="price">R$ 39,90</div>
-
-<a class="buy"
-https://s.shopee.com.br/3LPxAczrJV
+<a
+class="buy"
+href="https://s.shopee.com.br/4Az4Afspoi"
 target="_blank">
 
-🛒 Ver oferta
+🛒 COMPRAR AGORA
 
 </a>
 
 </div>
+
 </div>
 
 
 <!-- PRODUTO 4 -->
-<div class="product" data-category="moda">
 
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80">
+<div class="product" data-category="cabelos">
+
+<div class="image-placeholder">
+
+💜✨
+
+</div>
 
 <div class="product-info">
 
-<h3>Camiseta Estilosa</h3>
+<h3>
+Eudora Siàge Revela os Cachos 270ml
+</h3>
 
-<p>Modelo confortável e moderno.</p>
+<p>
+Creme para pentear indicado para cabelos ondulados,
+cacheados, crespos e em transição. Ajuda na definição
+e no controle do frizz.
+</p>
 
-<div class="price">R$ 59,90</div>
-
-<a class="buy"
-href="COLOQUE-SEU-LINK-AQUI"
+<a
+class="buy"
+href="https://s.shopee.com.br/9KhAKVDLVZ"
 target="_blank">
 
-🛒 Ver oferta
+🛒 COMPRAR AGORA
 
 </a>
 
 </div>
+
 </div>
+
+
+<!-- PRODUTO 5 -->
+
+<div class="product" data-category="todos">
+
+<div class="image-placeholder">
+
+🔥
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Achadinho da Shopee
+</h3>
+
+<p>
+Confira este produto e veja a oferta disponível.
+</p>
+
+<a
+class="buy"
+href="https://s.shopee.com.br/1LesnUtweR"
+target="_blank">
+
+🛒 COMPRAR AGORA
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUTO 6 -->
+
+<div class="product" data-category="todos">
+
+<div class="image-placeholder">
+
+⭐
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Achadinho em Oferta
+</h3>
+
+<p>
+Confira este produto diretamente na Shopee.
+</p>
+
+<a
+class="buy"
+href="https://s.shopee.com.br/7VFW8tmS6N"
+target="_blank">
+
+🛒 COMPRAR AGORA
+
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
 </main>
 
+
+<!-- RODAPÉ -->
+
 <footer>
 
-<p>© 2026 Achadinhos Online</p>
+<p>
+🛍️ Achadinhos Online
+</p>
 
-<p>Encontre seus produtos favoritos!</p>
+<p>
+Encontre produtos incríveis em um só lugar.
+</p>
+
+<p>
+© 2026 Achadinhos Online
+</p>
 
 </footer>
 
 
 <script>
 
+
+/* PESQUISA */
+
 function buscarProduto() {
 
-let texto =
-document.getElementById("search").value.toLowerCase();
+    let texto =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase();
 
-let produtos =
-document.querySelectorAll(".product");
+    let produtos =
+    document.querySelectorAll(".product");
 
-produtos.forEach(function(produto) {
+    produtos.forEach(function(produto) {
 
-let nome =
-produto.querySelector("h3").innerText.toLowerCase();
+        let nome =
+        produto
+        .querySelector("h3")
+        .innerText
+        .toLowerCase();
 
-if(nome.includes(texto)) {
+        if(nome.includes(texto)) {
 
-produto.style.display = "block";
+            produto.style.display = "block";
 
-} else {
+        } else {
 
-produto.style.display = "none";
+            produto.style.display = "none";
+
+        }
+
+    });
 
 }
 
-});
 
-}
-
+/* FILTRO */
 
 function filtrar(categoria) {
 
-let produtos =
-document.querySelectorAll(".product");
+    let produtos =
+    document.querySelectorAll(".product");
 
-produtos.forEach(function(produto) {
+    produtos.forEach(function(produto) {
 
-if(
-categoria === "todos" ||
-produto.dataset.category === categoria
-) {
+        if(
+            categoria === "todos" ||
+            produto.dataset.category === categoria
+        ) {
 
-produto.style.display = "block";
+            produto.style.display = "block";
 
-} else {
+        } else {
 
-produto.style.display = "none";
+            produto.style.display = "none";
 
-}
+        }
 
-});
+    });
 
 }
 
 </script>
 
+
 </body>
+
 </html>
