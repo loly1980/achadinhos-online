@@ -11,10 +11,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     background: #f5f5f5;
     color: #222;
 }
@@ -22,7 +22,7 @@ body {
 header {
     background: linear-gradient(135deg, #7b2cff, #a855f7);
     color: white;
-    padding: 25px 15px;
+    padding: 30px 15px;
     text-align: center;
 }
 
@@ -36,13 +36,13 @@ header p {
 }
 
 .search {
-    padding: 15px;
     background: white;
+    padding: 15px;
 }
 
 .search input {
     width: 100%;
-    padding: 14px;
+    padding: 14px 18px;
     border: 1px solid #ddd;
     border-radius: 25px;
     font-size: 16px;
@@ -92,11 +92,6 @@ header p {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    transition: 0.2s;
-}
-
-.product:hover {
-    transform: translateY(-4px);
 }
 
 .product img {
@@ -149,12 +144,6 @@ footer {
     text-align: center;
     padding: 25px 15px;
 }
-
-.no-results {
-    text-align: center;
-    display: none;
-    padding: 30px;
-}
 </style>
 </head>
 
@@ -162,7 +151,7 @@ footer {
 
 <header>
     <h1>🛍️ Achadinhos Online</h1>
-    <p>Encontre produtos incríveis em um só lugar!</p>
+    <p>Os melhores produtos em um só lugar!</p>
 </header>
 
 <div class="search">
@@ -184,92 +173,119 @@ footer {
 
 <main class="container">
 
-    <h2 class="title">🔥 Ofertas em destaque</h2>
+<h2 class="title">🔥 Produtos em destaque</h2>
 
-    <div class="products" id="products">
+<div class="products">
 
-        <div class="product" data-category="eletronicos">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
+<!-- PRODUTO 1 -->
+<div class="product" data-category="eletronicos">
 
-            <div class="product-info">
-                <h3>Fone Bluetooth</h3>
-                <p>Fone sem fio para música e chamadas.</p>
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
 
-                <div class="price">R$ 79,90</div>
+<div class="product-info">
 
-                <a class="buy"
-                   href="COLOQUE-SEU-LINK-AQUI"
-                   target="_blank">
-                   🛒 Ver oferta
-                </a>
-            </div>
-        </div>
+<h3>Fone Bluetooth</h3>
 
+<p>Fone sem fio para música e chamadas.</p>
 
-        <div class="product" data-category="beleza">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80">
+<div class="price">R$ 79,90</div>
 
-            <div class="product-info">
-                <h3>Kit de Beleza</h3>
-                <p>Produtos para cuidar da sua beleza.</p>
+<a class="buy"
+href="COLOQUE-SEU-LINK-AQUI"
+target="_blank">
 
-                <div class="price">R$ 49,90</div>
+🛒 Ver oferta
 
-                <a class="buy"
-                   href="COLOQUE-SEU-LINK-AQUI"
-                   target="_blank">
-                   🛒 Ver oferta
-                </a>
-            </div>
-        </div>
+</a>
+
+</div>
+</div>
 
 
-        <div class="product" data-category="casa">
-            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80">
+<!-- PRODUTO 2 -->
+<div class="product" data-category="beleza">
 
-            <div class="product-info">
-                <h3>Produto para Casa</h3>
-                <p>Uma ótima opção para sua casa.</p>
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80">
 
-                <div class="price">R$ 39,90</div>
+<div class="product-info">
 
-                <a class="buy"
-                   href="COLOQUE-SEU-LINK-AQUI"
-                   target="_blank">
-                   🛒 Ver oferta
-                </a>
-            </div>
-        </div>
+<h3>Kit de Beleza</h3>
+
+<p>Produtos para cuidar da sua beleza.</p>
+
+<div class="price">R$ 49,90</div>
+
+<a class="buy"
+href="COLOQUE-SEU-LINK-AQUI"
+target="_blank">
+
+🛒 Ver oferta
+
+</a>
+
+</div>
+</div>
 
 
-        <div class="product" data-category="moda">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80">
+<!-- PRODUTO 3 -->
+<div class="product" data-category="casa">
 
-            <div class="product-info">
-                <h3>Camiseta Estilosa</h3>
-                <p>Modelo confortável e moderno.</p>
+<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80">
 
-                <div class="price">R$ 59,90</div>
+<div class="product-info">
 
-                <a class="buy"
-                   href="COLOQUE-SEU-LINK-AQUI"
-                   target="_blank">
-                   🛒 Ver oferta
-                </a>
-            </div>
-        </div>
+<h3>Produto para Casa</h3>
 
-    </div>
+<p>Uma ótima opção para sua casa.</p>
 
-    <div class="no-results" id="noResults">
-        😕 Nenhum produto encontrado.
-    </div>
+<div class="price">R$ 39,90</div>
+
+<a class="buy"
+href="COLOQUE-SEU-LINK-AQUI"
+target="_blank">
+
+🛒 Ver oferta
+
+</a>
+
+</div>
+</div>
+
+
+<!-- PRODUTO 4 -->
+<div class="product" data-category="moda">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80">
+
+<div class="product-info">
+
+<h3>Camiseta Estilosa</h3>
+
+<p>Modelo confortável e moderno.</p>
+
+<div class="price">R$ 59,90</div>
+
+<a class="buy"
+href="COLOQUE-SEU-LINK-AQUI"
+target="_blank">
+
+🛒 Ver oferta
+
+</a>
+
+</div>
+</div>
+
+</div>
 
 </main>
 
 <footer>
-    <p>© 2026 Achadinhos Online</p>
-    <p>Encontre seus produtos favoritos!</p>
+
+<p>© 2026 Achadinhos Online</p>
+
+<p>Encontre seus produtos favoritos!</p>
+
 </footer>
 
 
@@ -277,54 +293,54 @@ footer {
 
 function buscarProduto() {
 
-    let texto = document
-        .getElementById("search")
-        .value
-        .toLowerCase();
+let texto =
+document.getElementById("search").value.toLowerCase();
 
-    let produtos = document.querySelectorAll(".product");
+let produtos =
+document.querySelectorAll(".product");
 
-    let encontrados = 0;
+produtos.forEach(function(produto) {
 
-    produtos.forEach(function(produto) {
+let nome =
+produto.querySelector("h3").innerText.toLowerCase();
 
-        let nome = produto
-            .querySelector("h3")
-            .innerText
-            .toLowerCase();
+if(nome.includes(texto)) {
 
-        if (nome.includes(texto)) {
-            produto.style.display = "block";
-            encontrados++;
-        } else {
-            produto.style.display = "none";
-        }
+produto.style.display = "block";
 
-    });
+} else {
 
-    document.getElementById("noResults").style.display =
-        encontrados === 0 ? "block" : "none";
+produto.style.display = "none";
+
+}
+
+});
+
 }
 
 
 function filtrar(categoria) {
 
-    let produtos = document.querySelectorAll(".product");
+let produtos =
+document.querySelectorAll(".product");
 
-    produtos.forEach(function(produto) {
+produtos.forEach(function(produto) {
 
-        if (
-            categoria === "todos" ||
-            produto.dataset.category === categoria
-        ) {
-            produto.style.display = "block";
-        } else {
-            produto.style.display = "none";
-        }
+if(
+categoria === "todos" ||
+produto.dataset.category === categoria
+) {
 
-    });
+produto.style.display = "block";
 
-    document.getElementById("noResults").style.display = "none";
+} else {
+
+produto.style.display = "none";
+
+}
+
+});
+
 }
 
 </script>
